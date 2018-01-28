@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-@SaveProperies(filepath = "src//romanosen//reflectionAnnotationtask2src//text.txt")
+@SaveProperies(filepath = "src//romanosen//reflectionAnnotationtask3src//text.txt")
 public class TextContainer {
     private String text;
 
