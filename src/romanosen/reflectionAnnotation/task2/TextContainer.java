@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-@SaveProperies(filepath = "src//romanosen//reflectionAnnotationtask3src//text.txt")
+@SaveProperies(filepath = "src//romanosen//reflectionAnnotation//task2//text.txt")
 public class TextContainer {
     private String text;
 
@@ -25,26 +25,18 @@ public class TextContainer {
     @Saver
     public void save(String filepath){
 
-        BufferedWriter writer = null;
-        try {
-            writer = new BufferedWriter(new FileWriter(filepath));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
+
+        try( BufferedWriter writer = new BufferedWriter(new FileWriter(filepath))) {
+
             writer.write(text);
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
-        try {
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
 
     }
-
-
 
         }
 
